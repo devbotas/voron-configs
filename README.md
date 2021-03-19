@@ -8,6 +8,7 @@ To configure repository to work on printers themselves:
   login <your-github-login>
   password <token-you-just-generated>
 5. If not done already, tell git who you are:
+
     git config --global user.email "you@example.com"
     git config --global user.name "Your Name"
 
