@@ -16,3 +16,5 @@ git config --global user.name "Your Name"
 ```
 
 Done. Now you may push to the repo from the printer directly.
+
+There are two files that are untracked because they are very printer-specific, printer.cfg-template and variables.cfg-template. Clone them into printer.cfg and variables.cfg and modify as needed.

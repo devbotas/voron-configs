@@ -1,0 +1,4 @@
+[Variables]
+# Length of the bowden tube. Used for loading/unloading filament.
+bowden_length = 385
+
