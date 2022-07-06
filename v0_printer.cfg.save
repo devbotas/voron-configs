@@ -11,10 +11,7 @@
 [include v0_steppers.cfg]
 
 [mcu]
-serial: /dev/serial/by-id/usb-Klipper_stm32f103xe_39FFD6054247333443630857-if00
-
-[mcu bottom]
-serial: /dev/serial/by-id/usb-Klipper_stm32f103xe_32FFD8054252303727532057-if00
+serial: /dev/serial/by-id/
 
 [printer]
 kinematics: corexy
