@@ -1,0 +1,33 @@
+# Common shared macros and settings.
+[include filament.cfg]
+[include helpers.cfg]
+[include print_control.cfg]
+
+# Printer-specific files.
+[include v0_display.cfg]
+[include v0_extruder.cfg]
+[include v0_heatbed.cfg]
+[include v0_lights.cfg]
+[include v0_steppers.cfg]
+
+[mcu]
+serial: /dev/serial/by-id/
+
+[printer]
+kinematics: corexy
+max_velocity: 200
+max_accel: 1500
+max_z_velocity: 30
+max_z_accel: 100
+square_corner_velocity: 5.0
+
+[idle_timeout]
+timeout: 1800
+
+[filament_switch_sensor my_sensor]
+pause_on_runout: True
+switch_pin:PA2
+runout_gcode:
+    LIGHTS_ON
+insert_gcode:
+    LIGHTS_OFF

@@ -23,7 +23,7 @@ There are two files that are untracked because they are very printer-specific, p
 ## Mini12864 display
 
 https://github.com/VoronDesign/Voron-Hardware/tree/master/STM32_Mini12864
-
+```
   [*] Enable extra low-level configuration options
       Micro-controller Architecture (STMicroelectronics STM32)  --->
       Processor model (STM32F042)  --->
@@ -32,15 +32,18 @@ https://github.com/VoronDesign/Voron-Hardware/tree/master/STM32_Mini12864
       USB ids  --->
   [ ] Specify a custom step pulse duration
   ()  GPIO pins to set at micro-controller startup
+```
 
 Short BOOT0 pins, reboot, and flash:
-
+```
   make flash FLASH_DEVICE=0483:df11
+```
 
 ## Huvud board
 
 https://github.com/bondus/KlipperToolboard/blob/master/doc/klipper.md
 
+```
   [*] Enable extra low-level configuration options
       Micro-controller Architecture (STMicroelectronics STM32)  --->
       Processor model (STM32F103)  --->
@@ -50,13 +53,16 @@ https://github.com/bondus/KlipperToolboard/blob/master/doc/klipper.md
       USB ids  --->
   [ ] Specify a custom step pulse duration
   ()  GPIO pins to set at micro-controller startup
+```
 
 BOOT1 to 3.3V, reboot, and flash:
 
-    make flash FLASH_DEVICE=1209:beba
+```
+make flash FLASH_DEVICE=1209:beba
+```
 
 ## BTT SKR E3 Turbo
-
+```
 [*] Enable extra low-level configuration options
     Micro-controller Architecture (LPC176x (Smoothieboard))  --->
     Processor model (lpc1769 (120 MHz))  --->
@@ -65,5 +71,22 @@ BOOT1 to 3.3V, reboot, and flash:
     USB ids  --->
 [ ] Specify a custom step pulse duration
 ()  GPIO pins to set at micro-controller startup
+```
+Use SD card for updating.
 
-Use CD card for updating.
+## BTT SKR Mini E3 V2
+
+https://docs.vorondesign.com/build/software/miniE3_v20_klipper.html
+
+```
+[*] Enable extra low-level configuration options
+    Micro-controller Architecture (STMicroelectronics STM32)  --->
+    Processor model (STM32F103)  --->
+[ ] Only 10KiB of RAM (for rare stm32f103x6 variant) (NEW)
+[ ] Disable SWD at startup (for GigaDevice stm32f103 clones) (NEW)
+    Bootloader offset (28KiB bootloader)  --->
+    Clock Reference (8 MHz crystal)  --->
+    Communication interface (USB (on PA11/PA12))  --->
+    USB ids  --->
+(!PA14) GPIO pins to set at micro-controller startup
+```
