@@ -19,6 +19,23 @@ Done. Now you may push to the repo from the printer directly.
 
 There are two files that are untracked because they are very printer-specific, printer.cfg-template and variables.cfg-template. Clone them into printer.cfg and variables.cfg and modify as needed.
 
+# Configuring CAN
+
+For Seeed CAN FD HAT, follow this: https://wiki.seeedstudio.com/2-Channel-CAN-BUS-FD-Shield-for-Raspberry-Pi/
+
+Then 
+
+```
+sudo nano /etc/network/interfaces.d/can0
+```
+And paste these lines:
+```
+allow-hotplug can0
+iface can0 can static
+    bitrate 1000000
+    up ip link set $IFACE txqueuelen 65535
+```
+
 # Building klippers
 ## Mini12864 display
 
