@@ -109,3 +109,35 @@ https://docs.vorondesign.com/build/software/miniE3_v20_klipper.html
     USB ids  --->
 (!PA14) GPIO pins to set at micro-controller startup
 ```
+## BTT SKR 1.4
+
+To install Katapult follow this:
+https://klipper.discourse.group/t/canboot-flash-btt-skr-1-3-1-4-1-4-turbo/3238
+
+```
+    Micro-controller Architecture (LPC176x (Smoothieboard))  --->
+    Processor model (lpc1768 (100 MHz))  --->
+    Build Katapult deployment application (Do not build)  --->
+    Communication interface (USB)  --->
+    USB ids  --->
+()  GPIO pins to set on bootloader entry
+[*] Support bootloader entry on rapid double click of reset button
+[ ] Enable bootloader entry on button (or gpio) state
+[ ] Enable Status LED
+```
+
+Klipper:
+
+```
+[*] Enable extra low-level configuration options
+    Micro-controller Architecture (LPC176x)  --->
+    Processor model (lpc1768 (100 MHz))  --->
+    Bootloader offset (16KiB bootloader)  --->
+    Communication interface (USB)  --->
+    USB ids  --->
+[*] Optimize stepper code for 'step on both edges'
+()  GPIO pins to set at micro-controller startup
+```
+
+Note: you can the use `make flash FLASH_DEVICE=/dev/ACMxx` to upload Klipper.
+
