@@ -111,6 +111,10 @@ https://docs.vorondesign.com/build/software/miniE3_v20_klipper.html
 ```
 ## BTT SKR 1.4
 
+Remove driver jumpers, leave CS/RX only. For the endstop pins to work, DIAG pin must be cut for the corresponding driver.
+
+If connecting Mini 12864 LCD, IDC10 shrouds shall be reversed if brands mismatch (i.e. display is from Fysetc).
+
 To install Katapult follow this:
 https://klipper.discourse.group/t/canboot-flash-btt-skr-1-3-1-4-1-4-turbo/3238
 
